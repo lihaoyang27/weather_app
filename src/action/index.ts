@@ -20,7 +20,7 @@ export const fetchPhoto = (query:string) => async (dispatch:any) => {
     console.log(query)
     try{
         const result = await axios.get(`https://api.unsplash.com/search/photos/?client_id=${ACCESS_KEY}&query=${query.toLowerCase()}`)
-        console.log(result)
+        // console.log(result)
         if(!!result){
             dispatch({
                 type: FETCH_PHOTO,

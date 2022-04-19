@@ -14,7 +14,7 @@ const Chart= () => {
 
 
 
-    console.log('alldata',allData)
+    // console.log('alldata',allData)
 
     const initXAxis = () => {
         if(!!allData){

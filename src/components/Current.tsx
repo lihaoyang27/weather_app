@@ -16,6 +16,9 @@ const Current= () => {
     // const allData = useSelector(state => state?.MainReducer?.allData)
     // @ts-ignore
     const current = useSelector(state => state?.MainReducer?.current)
+
+
+    // console.log('current',current)
     const currentTemp = parseInt(current[0]?.temp?.day)
     const description = current[0]?.weather[0].main
     const wind = current[0]?.wind_speed
