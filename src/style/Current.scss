@@ -1,0 +1,218 @@
+$breakPoint:900px;
+@media screen and (min-width: $breakPoint) {
+  .currentContainer {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: lightgray 1px solid;
+
+    & .currentInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & .currentWeather {
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .iconAndTem {
+          display: flex;
+          align-items: center;
+
+          & .num {
+            //line-height: 3rem;
+            font-size: 5rem;
+          }
+
+          & .celsius {
+            font-size: 3rem;
+          }
+        }
+
+        & .hiAndLow {
+          display: flex;
+          flex-direction: column;
+          height: 5rem;
+          justify-content: space-evenly;
+          margin-left: 20px;
+          font-weight: bold;
+        }
+
+      }
+
+      & .description {
+        font-size: 2rem;
+      }
+
+      & button {
+        width: 200px;
+        margin: auto;
+        border: gray 1px solid;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: gray 0 0 10px;
+          transition: 0.3s all linear;
+        }
+      }
+
+      & .moreInfo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 400px;
+        margin: auto;
+
+        & div {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    & .alertBtn {
+      background-color: orangered;
+      color: white;
+      font-weight: bold;
+      font-size: 1.6rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: orangered 0 0 20px;
+        transition: 0.3s all linear;
+      }
+    }
+    & .alert {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background-color: gray;
+      color: white;
+      padding: 20px 0;
+    }
+    & .showA {
+      display: block;
+    }
+    & .hideA {
+      display: none;
+    }
+  }
+  .moreInfoForSmallScreen{
+    display: none;
+  }
+}
+
+@media screen and (max-width: $breakPoint) {
+  .currentContainer {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: lightgray 1px solid;
+    padding-top: 40px;
+
+    & .currentInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & .currentWeather {
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .iconAndTem {
+          display: flex;
+          align-items: center;
+
+          & .num {
+            //line-height: 3rem;
+            font-size: 5rem;
+          }
+
+          & .celsius {
+            font-size: 3rem;
+          }
+        }
+
+        & .hiAndLow {
+          display: flex;
+          flex-direction: column;
+          height: 5rem;
+          justify-content: space-evenly;
+          margin-left: 20px;
+          font-weight: bold;
+        }
+
+      }
+
+      & .description {
+        font-size: 2rem;
+      }
+
+      & button {
+        display: none;
+      }
+
+      & .moreInfoForSmallScreen {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        min-width: 360px;
+        margin: auto;
+
+        & div {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    & .alertBtn {
+      background-color: orangered;
+      color: white;
+      font-weight: bold;
+      font-size: 1.6rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: orangered 0 0 20px;
+        transition: 0.3s all linear;
+      }
+    }
+    & .alert {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background-color: gray;
+      color: white;
+      padding: 20px 0;
+    }
+    & .showA {
+      display: block;
+    }
+    & .hideA {
+      display: none;
+    }
+  }
+}
