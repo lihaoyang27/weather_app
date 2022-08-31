@@ -4,12 +4,16 @@ import Current from "./Current";
 import {useDispatch, useSelector} from "react-redux";
 import SevenDay from "./SevenDay";
 import Chart from "./Chart";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {fetchPhoto} from "../action";
+
+
 
 const Main = () => {
     // @ts-ignore
     const dark = useSelector(state => state?.MainReducer?.darkMode)
+
+
 
     return(
         <>

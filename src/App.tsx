@@ -13,11 +13,13 @@ function App() {
     const photo = useSelector(state => state?.MainReducer?.photo)
     // @ts-ignore
     const current = useSelector(state => state?.MainReducer?.current)
-    const [welcome, setWelcome] = useState(true)
+    // const [welcome, setWelcome] = useState(true)
+    // const [city, setCity] = useState<string>("montreal")
+
 
   useEffect(()=>{
     fetchData()(dispatch)
-      setTimeout(()=>{setWelcome(!welcome)},3500)
+      // setTimeout(()=>{setWelcome(!welcome)},3500)
   },[])
 
     useEffect(() => {
@@ -26,13 +28,13 @@ function App() {
 
   return (
     <div className="App" style={photo ? {backgroundImage: `url(${photo?.urls?.regular})`,} : undefined}>
-        {
-            welcome
-            &&
-            <Welcome/>
-        }
+        {/*{*/}
+        {/*    welcome*/}
+        {/*    &&*/}
+        {/*    <Welcome/>*/}
+        {/*}*/}
         <Layout/>
-        <Main/>
+        <Main />
     </div>
   );
 }

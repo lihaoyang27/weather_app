@@ -65,21 +65,6 @@ const Current= () => {
                         <div>uvi: {uvi}    </div>
                     </div>
                 </div>
-                {/*{*/}
-                {/*    allData.alerts*/}
-                {/*    &&*/}
-                {/*    <div className='alertBtn' onClick={()=>{setShowAlert(!showAlert)}}> {allData.alerts.length} </div>*/}
-                {/*}*/}
-                {/*{*/}
-                {/*    allData?.alerts?.map((value: any, index: number) => {*/}
-                {/*        return (*/}
-                {/*            <div className={`alert ${showAlert ? "showA" : "hideA"}`} key={index}>*/}
-                {/*                <h3>{value.sender_name}</h3>*/}
-                {/*                <div>{getTime(value.start)} - {getTime(value.end)}</div>*/}
-                {/*                <div>{value.description}</div>*/}
-                {/*            </div>)*/}
-                {/*    })*/}
-                {/*}*/}
             </div>
         </>
     )
