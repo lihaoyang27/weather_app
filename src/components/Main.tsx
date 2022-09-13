@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import SevenDay from "./SevenDay";
 import Chart from "./Chart";
 import React, {useEffect} from "react";
-import {fetchPhoto} from "../action";
+
 
 
 

@@ -16,6 +16,7 @@ const MainReducer = (state = initState, action:any) => {
     switch (type){
         case FETCH_DATA:
             const temp = {...payload}
+            console.log(payload)
             const sevenDayTemp = temp.data.daily
             sevenDayTemp.pop()
 

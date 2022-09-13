@@ -1,5 +1,4 @@
 import * as echarts from 'echarts';
-import exp from "constants";
 import EChartsReact from "echarts-for-react";
 import {useSelector} from "react-redux";
 import {useEffect, useState} from "react";

@@ -49,14 +49,14 @@ const Current= () => {
                     <div className='description'>{description}</div>
                     <button onClick={() => setShow(!show)}>{show ? "Hide" : "Show more information"}</button>
                     {
-                        show ?
+                        show &&
                             <div className='moreInfo'>
                                 <div>Wind Speed: {wind}m/s </div>
                                 <div>Humidity: {humidity}%  </div>
                                 <div>Pressure: {pressure}hPa  </div>
                                 <div>uvi: {uvi}    </div>
                             </div>
-                            :undefined
+
                     }
                     <div className='moreInfoForSmallScreen'>
                         <div>Wind Speed: {wind}m/s </div>

@@ -5,7 +5,8 @@ import {fetchData, fetchPhoto} from "./action";
 import {useDispatch, useSelector} from "react-redux";
 import Main from './components/Main';
 import Layout from "./components/Layout";
-import Welcome from "./components/Welcome";
+import InputCity from "./components/InputCity";
+
 
 function App() {
  const dispatch = useDispatch()
@@ -14,11 +15,17 @@ function App() {
     // @ts-ignore
     const current = useSelector(state => state?.MainReducer?.current)
     // const [welcome, setWelcome] = useState(true)
-    // const [city, setCity] = useState<string>("montreal")
+    const [city, setCity] = useState<string>("montreal")
+    const [geo, setGeo] = useState<number []>([45.5088,-73.5878])
+
+    useEffect(()=>{
+        console.log(city)
+    },[city])
+
 
 
   useEffect(()=>{
-    fetchData()(dispatch)
+    fetchData(geo)(dispatch)
       // setTimeout(()=>{setWelcome(!welcome)},3500)
   },[])
 
@@ -26,14 +33,17 @@ function App() {
         fetchPhoto(current[0]?.weather[0]?.main)(dispatch)
     },[current])
 
+    //TODO: get geolocation of the input city
+
   return (
-    <div className="App" style={photo ? {backgroundImage: `url(${photo?.urls?.regular})`,} : undefined}>
+    <div className="App" style={photo && {backgroundImage: `url(${photo?.urls?.regular})`}}>
         {/*{*/}
         {/*    welcome*/}
         {/*    &&*/}
         {/*    <Welcome/>*/}
         {/*}*/}
         <Layout/>
+        {/*<InputCity setCity={setCity}/>*/}
         <Main />
     </div>
   );

@@ -4,10 +4,11 @@ import axios from "axios";
 
 
 
-export const fetchData = () => async (dispatch:any) => {
+export const fetchData = (geo:number[]) => async (dispatch:any) => {
     try {
-        const result = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=45.5088&lon=-73.5878&exclude=current&units=metric&appid=${API_KEY}`)
-        if (!!result.data) {
+        const result = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${geo[0]}&lon=${geo[1]}&exclude=current&units=metric&appid=${API_KEY}`)
+        if (result.data) {
+            console.log(result.data)
             dispatch({type: FETCH_DATA, payload: result})
         }
     }catch (e) {

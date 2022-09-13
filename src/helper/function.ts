@@ -1,3 +1,4 @@
+import exp from "constants";
 
 
 export const getTime = (time:number) => {
@@ -6,3 +7,16 @@ export const getTime = (time:number) => {
     let humanDate:string = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear()
     return humanDate
 }
+
+// export const debounce = (callback:(e:any) => void) => {
+//     let timeout:any
+//     return function(...args:any){
+//         // @ts-ignore
+//         const context:any= this
+//         if (timeout) clearTimeout(timeout)
+//         timeout = setTimeout(()=>{
+//             timeout = null
+//             callback.apply(context, args)
+//         },1000)
+//     }
+// }
